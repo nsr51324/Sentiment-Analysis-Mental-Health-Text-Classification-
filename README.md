@@ -8,12 +8,16 @@ The system is wrapped in a simple Python application (`app.py`) for real-time pr
 ## 📁 Repository Structure
 ```
 Plaintext
-├── sentiment-analysis-mental-health.ipynb   # Jupyter Notebook (EDA + training)
-├── app.py                                   # Simple real-time prediction app
-├── model.pkl                                # Trained ML model
-├── best_model.pkl                           # Best performing optimized model
-├── encoder.pkl                              # Label encoder for target classes
-├── labels.pkl                               # Mapping of encoded labels
+├── models/
+│ ├── model.pkl
+│ ├── best_model.pkl
+│ ├── encoder.pkl
+│ └── labels.pkl
+│
+├── notebooks/
+│ └── sentiment-analysis-mental-health.ipynb
+│
+├── app.py
 ├── .gitignore
 └── README.md
 ```
