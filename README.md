@@ -1,10 +1,12 @@
-Sentiment Analysis for Mental Health Text Classification
-📝 Project Overview
-This project is a Machine Learning system designed to classify mental health-related text into various emotional states, such as stress, anxiety, or neutral feelings. By leveraging Natural Language Processing (NLP) to preprocess text and utilizing a trained classification model, the system can accurately predict the underlying sentiment.
+# Sentiment Analysis for Mental Health Text Classification
 
-The system is wrapped in a simple Python application (app.py) to allow for real-time predictions.
+## Project Overview
+This project is a Machine Learning system designed to classify mental health-related text into emotional states such as stress, anxiety, or neutral feelings. It uses Natural Language Processing (NLP) for text preprocessing and a trained classification model to predict sentiment in real-time.
 
-📁 Repository Structure
+The system is wrapped in a simple Python application (`app.py`) for real-time predictions.
+
+## 📁 Repository Structure
+```
 Plaintext
 ├── sentiment-analysis-mental-health.ipynb   # Jupyter Notebook (EDA + training)
 ├── app.py                                   # Simple real-time prediction app
@@ -14,78 +16,36 @@ Plaintext
 ├── labels.pkl                               # Mapping of encoded labels
 ├── .gitignore
 └── README.md
-⚙️ How It Works
-Data Preprocessing
+```
 
-Cleans raw text by removing noise, symbols, and unnecessary characters.
+## ⚙️ How It Works
 
-Standardizes text formatting for better model comprehension.
+### 1. Data Preprocessing
+- Cleans raw text by removing noise, symbols, and unnecessary characters  
+- Standardizes text for better model understanding  
 
-Feature Engineering
+### 2. Feature Engineering
+- Converts text into numerical format using techniques like TF-IDF vectorization  
 
-Transforms textual data into a numerical format using vectorization techniques (e.g., TF-IDF or similar embedding methods).
+### 3. Model Training
+- Trains a classification model on mental health text datasets  
+- Evaluates performance using multiple metrics  
+- Saves the best-performing model  
 
-Model Training
+### 4. Prediction
+- Accepts real-time user input  
+- Applies the same preprocessing pipeline  
+- Outputs predicted mental health category  
 
-Trains a classification model on curated mental health text datasets.
+##  Model Files Explained
 
-Evaluates performance and saves the highest-performing iteration.
+- **model.pkl** → Main trained machine learning model  
+- **best_model.pkl** → Optimized version of the model  
+- **encoder.pkl** → Encodes and decodes target labels  
+- **labels.pkl** → Stores mapping of encoded classes  
 
-Prediction
+## 🚀 How to Run the Project
 
-Accepts user text input in real-time.
-
-Automatically applies the same preprocessing and vectorization pipeline.
-
-Outputs the predicted mental health category using the saved model.
-
-🧠 Model Files Explained
-model.pkl → The main trained Machine Learning model.
-
-best_model.pkl → The most optimized version of the model selected based on evaluation metrics.
-
-encoder.pkl → Converts text labels into numerical values during training and vice versa during inference.
-
-labels.pkl → Stores the explicit mapping of encoded classes for correct interpretation.
-
-🚀 How to Run the Project
-1. Install Dependencies
-Make sure you have Python installed, then run:
-
-Bash
+### 1. Install Dependencies
+```bash
 pip install -r requirements.txt
-2. Run the Application
-Launch the real-time prediction script:
-
-Bash
-python app.py
-💬 Example Usage
-Input: "I feel overwhelmed and anxious all the time"
-
-Output: Predicted Class: Anxiety / Stress
-
-🧪 Notebook Details
-The core development file sentiment-analysis-mental-health.ipynb contains the full end-to-end pipeline, including:
-
-Detailed Exploratory Data Analysis (EDA)
-
-Data visualization plots
-
-Complete text preprocessing pipeline
-
-Model training iterations & hyperparameter tuning
-
-Evaluation metrics (Accuracy, Precision, Recall, F1-Score)
-
-🛠️ Technologies Used
-Python 🐍
-
-Scikit-learn (Machine Learning algorithms & evaluation)
-
-Pandas & NumPy (Data manipulation)
-
-NLP Techniques (Text tokenization and vectorization)
-
-Pickle (Model serialization & saving)
-
-Flask (If utilized for the app.py interface)
